@@ -68,7 +68,7 @@ It is very important to use small **prompt engineering** so that the model knows
 
 2- We may require to Fine-Tune our GPT-4-Turbo generator model so that the model can adapt to the specific dataset relevant to our RAG. This adaptation ensures that the generated responses are more contextually appropriate and aligned with the target use case. Also, this helps improve the accuracy of the generated responses by reducing generalization errors and aligning the model's language generation capabilities with the specific nuances of the answer to the query. This is considered a challenge that we may be required to handle after releasing the AI system.
 
-3- There also could be a challenge in a delay during the embedding process. In some cases, it is helpful to cache frequently accessed embeddings and pre-fetch embeddings for anticipated queries. This can significantly reduce latency for common generalized queries (that may be the same for different manuals).
+3- There also could be a challenge in a delay during the embedding process using OpenAI's text-embedding-3-small model. In some cases, it is helpful to cache frequently accessed embeddings and pre-fetch embeddings for anticipated queries. This can significantly reduce latency for common generalized queries (that may be the same for different manuals).
  <br>
   <br>
   <br>
