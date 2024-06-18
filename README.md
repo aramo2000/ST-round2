@@ -1,8 +1,8 @@
 **RAG (Retrieval augmented generation)** is a generative AI method that enhances LLM performance by combining world knowledge with custom or private knowledge. This combining of knowledge sets in RAG is helpful for several reasons: 
 * Providing LLMs with certain information regarding certain fields: In our case, we want the LLMs to work and generate responses specifically from installation manual PDFs. RAG allows adding new knowledge without retraining a whole LLM model from scratch.
 * Maintaining a dynamic knowledge base: Custom documents can be updated, added, removed, or modified anytime, keeping RAG systems up-to-date without retraining.
-
-
+ <br>
+ 
 **1- Describe each component of the RAG system (embedder, PDF processor, vector DB, LLM response generation etc.). For each component, describe how you would choose which tool to use (e.g. for the embedding model I will choose to use openAI embeddings because of ….). You can also present certain tools and discuss why you wouldn't use them.**
 
 **PDF Processor.**
@@ -54,8 +54,9 @@ We can use OpenAI's GPT-4-Turbo as the response generator as it is mainly the la
 
 **Prompt Engineer and Data retrieval.**
 It is very important to use small **prompt engineering** so that the model knows that it is an assistant bot, and the users will ask questions related to a certain PDF manual connected with equipment. Then, we can use **GPT 4's retrieval tool** and make it answer based only on the information it receives from the vector DB.
-
-
+ <br>
+ <br>
+  <br>
 **2- Describe at least 2 challenges that you will encounter when using the tool(s) that you chose (e.g. when using openAI embeddings, the vector size is too long …), and try to think of how you can overcome those challenges.**
 
 1- A challenge could be that I explained above is the vector database's scalability. If this AI is used by too many technicians, we will need to scale our database, and while Weaviate is designed for scalability, there are some practical limits to how much it can scale in certain environments or configurations. These limits can depend on factors such as hardware capabilities, network infrastructure, and the complexity of data and queries. If we see that we are about to reach to those limits, we will need to upgrade our whole vector DB to a more scalable one, for example, Pinecone, even though that will not offer a better management system.
@@ -63,8 +64,9 @@ It is very important to use small **prompt engineering** so that the model knows
 2- We may require to Fine-Tune our GPT-4-Turbo generator model so that the model can adapt to the specific dataset relevant to our RAG. This adaptation ensures that the generated responses are more contextually appropriate and aligned with the target use case. Also, this helps improve the accuracy of the generated responses by reducing generalization errors and aligning the model's language generation capabilities with the specific nuances of the answer to the query. This is considered a challenge that we may be required to handle after releasing the AI system.
 
 3- There also could be a challenge in a delay during the embedding process. In some cases, it is helpful to cache frequently accessed embeddings and pre-fetch embeddings for anticipated queries. This can significantly reduce latency for common generalized queries (that may be the same for different manuals).
-
-
+ <br>
+  <br>
+  <br>
 **3- Once you complete choosing the tools, present 5 examples of complex questions that the chatbot you designed will be able to answer, and 5 examples of questions that your chatbot will fail to answer. Present reasons why.**
 
 Will be able to answer:
