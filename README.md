@@ -90,8 +90,9 @@ The chatbot can search data connected with blinking error codes and troubleshoot
 
 **What steps should I follow to fix a leaky kitchen faucet?** <br>
 The chatbot will be able to answer the question even without having any data connected with the kitchen faucet because it will have the general steps to the query, although it may not be applicable to every faucet.
+<br>
 
-
+<br>
 Will not be able to answer:
 
 **How can I create a RAG chatbot system?** <br>
